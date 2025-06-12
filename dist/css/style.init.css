@@ -19,7 +19,7 @@ body {
     );*/
     background-size: cover;
     background-position: unset;
-    background-image: linear-gradient(0deg, rgb(2 18 13), #060606cc), url('img/bg_hutan.png');
+    background-image: linear-gradient(0deg, rgb(2 18 13), #060606cc), url('../img/bpdas-konaweha.png');
     opacity: 0;
     animation: 1s ease-out var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
     animation-fill-mode: forwards;
