@@ -1,6 +1,9 @@
 # Nonaktifkan Directory Listing (lihat isi folder)
 Options -Indexes
 
+# Blok folder sensitif jika sampai ter-ekspos
+RedirectMatch 403 ^/(vendor|storage|config|\.git|node_modules|tests|\.env|composer\.(json|lock)|package\.json)$
+
 # Izinkan hanya file HTML, CSS, JS, dan gambar
 <FilesMatch "\.(html|htm|css|js|jpg|jpeg|png|gif|webp|ico|svg|woff|woff2|ttf|eot)$">
     Require all granted
@@ -10,6 +13,3 @@ Options -Indexes
 <FilesMatch ".*">
     Require all denied
 </FilesMatch>
-
-# Blok folder sensitif jika sampai ter-ekspos
-RedirectMatch 403 ^/(vendor|storage|config|\.git|node_modules|tests|\.env|composer\.(json|lock)|package\.json)$
